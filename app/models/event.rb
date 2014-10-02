@@ -48,7 +48,7 @@ class Event < ActiveRecord::Base
 
       availabilities[i][:slots] = slots
     end
-    binding.pry
+
     return availabilities 
   end
 
@@ -69,7 +69,8 @@ class Event < ActiveRecord::Base
         end
       end
     end
-    return slots
+    
+    return slots.uniq
   end
 
 end
